@@ -18,7 +18,10 @@ cd ../..
 cd packages/apps/Settings
 git apply --verbose ../../../patches/packages_apps_Settings.patch
 cd ../../..
+cd packages/apps/Updater
+git apply --verbose ../../../patches/updater_vanilla.patch
 . build/envsetup.sh
+export WITH_GAPPS := false
 NPROC=$(nproc --all)
 lunch infinity_nabu-userdebug && mka bacon -j${NPROC} 2>&1 | tee build.log
 
