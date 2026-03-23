@@ -22,7 +22,7 @@ cd packages/apps/Updater
 git apply --verbose ../../../patches/updater_vanilla.patch
 cd ../../..
 . build/envsetup.sh
-export WITH_GAPPS := false
+export WITH_GAPPS=false
 NPROC=$(nproc --all)
 lunch infinity_nabu-userdebug && mka bacon -j${NPROC} 2>&1 | tee build.log
 
