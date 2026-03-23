@@ -20,6 +20,7 @@ git apply --verbose ../../../patches/packages_apps_Settings.patch
 cd ../../..
 cd packages/apps/Updater
 git apply --verbose ../../../patches/updater_vanilla.patch
+cd ../../..
 . build/envsetup.sh
 export WITH_GAPPS := false
 NPROC=$(nproc --all)
