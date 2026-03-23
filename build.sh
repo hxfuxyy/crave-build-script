@@ -11,7 +11,7 @@ git clone https://github.com/Evolution-X-Devices/hardware_xiaomi hardware/xiaomi
 git clone https://github.com/TogoFire/packages_apps_ViPER4AndroidFX packages/apps/ViPER4AndroidFX
 rm -rf packages/apps/Updater
 git clone https://github.com/hxfuxyy/packages_apps_Updater packages/apps/Updater
-git clone https://github.com/hxfuxyy/inf-patches patches  -b test
+git clone https://github.com/hxfuxyy/inf-patches patches -b test
 cd frameworks/base
 git apply --verbose ../../patches/frameworks_base.patch
 cd ../..
