@@ -3,7 +3,7 @@ rm -rf .repo/local_manifests/
 rm -rf .repo/repo/
 repo init --no-repo-verify --git-lfs -u https://github.com/ProjectInfinity-X/manifest -b 16 -g default,-mips,-darwin,-notdefault
 /opt/crave/resync.sh
-git clone https://github.com/hxfuxyy/android_device_xiaomi_nabu device/xiaomi/nabu
+git clone https://github.com/hxfuxyy/android_device_xiaomi_nabu device/xiaomi/nabu -b 16.0-testing
 git clone https://gitlab.com/crdroidandroid/android_vendor_xiaomi_nabu vendor/xiaomi/nabu
 git clone https://github.com/hxfuxyy/android_kernel_xiaomi_sm8150 kernel/xiaomi/nabu
 rm -rf hardware/xiaomi
@@ -22,7 +22,7 @@ cd packages/apps/Updater
 git apply --verbose ../../../patches/updater_vanilla.patch
 cd ../../..
 . build/envsetup.sh
-export WITH_GAPPS=false
+export WITH_GAPPS=true
 NPROC=$(nproc --all)
 lunch infinity_nabu-userdebug && mka bacon -j${NPROC} 2>&1 | tee build.log
 
